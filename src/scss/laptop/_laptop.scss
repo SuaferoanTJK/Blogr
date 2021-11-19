@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.laptop{
+    padding: 0 0 10rem 0;
+    @include m.tablet{
+        padding: 0 0 15rem 0;
+        position: relative;
+    }
+    @include m.desktop{
+        padding: 15rem 0 20rem 0;
+    }
+    &__grid{
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    &__img{
+        margin: 0 auto;
+        @include m.tablet{
+            position: absolute;
+            left: -20rem;
+            width: 65rem;
+        }
+        @include m.desktop{
+            top: 0;
+            left: -24rem;
+            width: 85rem;
+        }
+    }
+    &__info{
+        text-align: center;
+        @include m.tablet{
+            text-align: left;
+        }
+    }
+    &__block{
+        padding: 0 3rem;
+        color: v.$veryDarkGrayishBlueB;
+        @include m.tablet{
+            padding: 0 5rem 0 0;
+        }
+    }
+    &__title{
+        color: v.$veryDarkBlueHeadings;
+        font-weight: 500;
+        font-size: 2.7rem;
+        padding: 2.5rem 0 1rem 0;
+    }
+}

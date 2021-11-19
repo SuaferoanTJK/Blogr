@@ -1,0 +1,26 @@
+// Fonts
+$fontPrimary: 'Overpass', sans-serif; // 300, 600
+$fontSecondary: 'Ubuntu', sans-serif; // 400, 500, 700
+
+// Media Queries Sizes
+$mobile: 767px;
+$tablet: 768px;
+$desktop: 1440px;
+
+// Colors
+$lightRedText: hsl(356, 100%, 66%); // CTA text
+$veryLightRedBG: hsl(355, 100%, 74%); // CTA hover background
+$veryDarkBlueHeadings: hsl(208, 49%, 24%); // Headings
+
+$white: hsl(0, 0%, 100%); // Text
+$grayishBlue: hsl(240, 2%, 79%); // Footer text
+$veryDarkGrayishBlueB: hsl(207, 13%, 34%); // Body copy
+$veryDarkBlackBlueF: hsl(240, 10%, 16%); // Footer background
+
+// Background gradient - Intro/CTA mobile nav:
+$veryLightRed: hsl(13, 100%, 72%);
+$lightRed: hsl(353, 100%, 62%);
+
+// Background gradient - Body:
+$veryDarkGrayBlue: hsl(237, 17%, 21%);
+$veryDarkDesaturatedBlue: hsl(237, 23%, 32%);

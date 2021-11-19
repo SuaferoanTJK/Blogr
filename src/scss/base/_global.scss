@@ -1,0 +1,18 @@
+@use 'variables' as v; 
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+.container{
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+    display: block;
+}

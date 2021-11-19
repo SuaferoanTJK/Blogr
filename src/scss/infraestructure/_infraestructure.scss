@@ -1,0 +1,67 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.infraestructure{
+    background-image: url("../img/bg-pattern-circles.svg"), linear-gradient(to bottom, lighten(v.$veryDarkGrayBlue,5%) 0% 100%);
+    background-repeat: no-repeat;
+    background-size: 150%, 100%;
+    background-position: top -22rem left 50%, center;
+    color: v.$white;
+    margin: 10rem 0;
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    @include m.tablet{
+        background-size: 102rem, 100%;
+        background-position: top -60rem left -30rem, center;  
+    }
+    @include m.desktop{
+        background-position: top -50rem left -22rem, center;    
+    }
+    &__grid{
+        position: relative;
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &__img{
+        position: absolute;
+        width: 90%;
+        top: -15rem;
+        @include m.tablet{
+            width: 50rem;
+            top: -5rem;
+            left: -4rem;
+        }
+        @include m.desktop{
+            width: 60rem;
+            top: -8rem;
+            left: -5rem;
+        }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 65% 0 10rem 0;
+        @include m.tablet{
+            text-align: left;
+            padding: 7rem 0 7rem 7rem;
+        }
+        @include m.desktop{
+            padding: 10rem 0;
+        }
+    }
+    &__heading{
+        font-size: 3.6rem;
+        font-weight: 300;
+        margin-bottom: .5rem;
+    }
+    &__text{
+        padding: 0 3rem;
+        @include m.tablet{
+            padding: 0 3rem 0 0;
+        }
+    }
+}

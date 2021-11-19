@@ -1,0 +1,78 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.future{
+    padding: 10rem 0;
+    text-align: center;
+    overflow: hidden;
+    @include m.tablet{
+        text-align: left;
+        position: relative;
+    }
+    @include m.desktop{
+        min-height: 85rem;
+    }
+    &__heading{
+        text-align: center;
+        font-size: 2.5rem;
+        color: v.$veryDarkBlueHeadings;
+        margin-bottom: 2rem;
+        @include m.tablet{
+            font-size: 4rem;
+            font-weight: 500;
+        }
+    }
+    &__grid{
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-auto-flow: dense;
+            :nth-child(1){
+                grid-column: 2/3;
+            }
+        }
+    }
+    &__img{
+        margin: 0 auto;
+        @include m.tablet{
+            position: absolute;
+            width: 60rem;
+            top: 10rem;
+            right: -20rem;
+        }
+        @include m.desktop{
+            width: 80rem;
+            top: 5rem;
+            right: -25rem;
+        }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__block{
+        padding-right: 4.8rem;
+        &:first-of-type{
+            @include m.tablet{
+                padding-top: 2rem;
+                margin: 4rem 0;
+            }
+        }
+    }
+    &__title{
+        font-size: 2.5rem;
+        color: v.$veryDarkBlueHeadings;
+        padding: 3rem 3rem 1rem 3rem;
+        @include m.tablet{
+            padding: 1rem 5rem 1rem 0;
+        }
+    }
+    &__description{
+        padding: 0 3rem 1rem 3rem;
+        @include m.tablet{
+            margin: 0;
+            padding: 1rem 5rem 1rem 0;
+        }
+    }
+}

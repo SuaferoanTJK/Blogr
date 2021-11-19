@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.hero{
+    font-size: 1.6rem;
+    padding: 10rem 0 15rem 0;
+    text-align: center;
+    color: v.$white;
+    @include m.tablet{
+        padding: 15rem 0 20rem 0;
+    }
+    &__title{
+        font-size: 3.7rem;
+        padding: 0 1rem;
+        @include m.tablet{
+            font-size: 7rem;    
+        }
+    }
+    &__text{
+        font-size: 1.8rem;
+        padding: 0 1.5rem;
+        margin-bottom: 4rem;
+    }
+    &__link{
+        text-decoration: none;
+        margin: 0 .3rem;
+        padding: 1rem 2rem;
+        border: .2rem solid v.$white;
+        border-radius: 2rem;
+        &:nth-child(1){
+            background-color: v.$white;
+            color: v.$lightRed;
+            &:hover{
+                background-color: v.$veryLightRedBG;
+                border: .2rem solid v.$veryLightRedBG;
+                color: v.$white;
+            }
+        }
+        &:nth-child(2){
+            color: v.$white;
+            &:hover{
+                background-color: v.$white;
+                color: v.$lightRed; 
+            }
+        }
+    }
+}

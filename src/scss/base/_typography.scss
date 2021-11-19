@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+h1, h2, h3{
+    margin: 0;
+    line-height: 1.2;
+}
+body{
+    font-family: v.$fontSecondary;
+    font-weight: 700;
+}
+h1{
+    font-family: v.$fontPrimary;
+    font-size: 2rem;
+}
+p{
+    font-family: v.$fontPrimary;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
